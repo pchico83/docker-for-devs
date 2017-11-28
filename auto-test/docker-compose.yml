@@ -1,0 +1,21 @@
+version: "3.2"
+services:
+  web:
+    image: pchico83/ci
+    build:
+      cache_from:
+        - pchico83/ci
+      context: .
+    depends_on:
+      - redis
+    ports:
+      - 5000:5000
+  redis:
+    image: redis
+  test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    depends_on:
+      - web
+    command: sh /ci/test.sh

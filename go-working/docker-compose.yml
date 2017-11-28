@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+  test:
+    image: golang:${GO_VERSION:-1.9}
+    working_dir: /go/src/app
+    volumes:
+      - ${PWD}:/go/src/app
+    command: go test ./...

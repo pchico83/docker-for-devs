@@ -1,0 +1,6 @@
+docker:
+  image: docker:17.10
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
+  entrypoint: docker
+  command: ps
