@@ -1,0 +1,6 @@
+version: "3.2"
+services:
+  cache:
+    image: redis
+    ports:
+    - 6379:6379
