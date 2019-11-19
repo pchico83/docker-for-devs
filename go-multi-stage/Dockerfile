@@ -1,4 +1,4 @@
-FROM golang:1.7.3 as builder
+FROM golang:1.13 as builder
 WORKDIR /go/src/github.com/pchico/docker-for-devs/go-multi-stage
 RUN go get github.com/sirupsen/logrus
 COPY app.go .
