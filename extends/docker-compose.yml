@@ -1,10 +1,12 @@
-docker:
-  image: docker:17.10
-  volumes:
-    - /var/run/docker.sock:/var/run/docker.sock
-  entrypoint: docker
-  command: ps
+version: "3.2"
+services:
+  docker:
+    image: docker:17.10
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: docker
+    command: ps
 
-docker_17_09:
-  extends: docker
-  image: docker:17.09
+  docker_17_09:
+    extends: docker
+    image: docker:17.09

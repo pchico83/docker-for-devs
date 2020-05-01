@@ -1,2 +1,4 @@
-docker:
-  image: docker:17.09
+version: "3.2"
+services:
+  docker:
+    image: docker:17.09
